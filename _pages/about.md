@@ -22,7 +22,7 @@ Publications
 ======
 ## 2023
 
-A Locality-based Neural Solver for Optical Motion Capture
+### A Locality-based Neural Solver for Optical Motion Capture
 
 ACM Siggraph Asia 2023
 
