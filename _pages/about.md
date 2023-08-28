@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm Bowen Zheng, a master student at State Key Lab of CAD&CG, Zhejiang University, advised by [Prof. Xiaogang Jin](http://www.cad.zju.edu.cn/home/jin/). I obtained my bachelor's degree from the College of Computer Science and Technology, Zhejiang University.  
+I'm Bowen Zheng, a first-year master's student at State Key Lab of CAD&CG, Zhejiang University, advised by [Prof. Xiaogang Jin](http://www.cad.zju.edu.cn/home/jin/). In 2023, I obtained my bachelor's degree from the College of Computer Science and Technology, Zhejiang University.  
 
 **Research Interest**
 * Computer Animation
