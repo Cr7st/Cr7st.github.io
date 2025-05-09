@@ -15,6 +15,9 @@ I am currently a M.S. student at State Key Lab of CAD&CG, Zhejiang University su
 
 **Contact:** bwzheng@zju.edu.cn / zhengbowen.crist@gmail.com
 
+
+# Publications
+
 {% for post in site.publications reversed %}
     {% if post.select == true %}
       {% include archive-single.html %}

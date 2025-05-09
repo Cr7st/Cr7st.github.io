@@ -22,10 +22,10 @@ repository               : "Cr7st/cr7st.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "my_photo.jpg" # filename of your avatar image placed in /images/, e.g. "my_photo.jpg"
   name             : "Bowen Zheng"
   pronouns         : # example: "she/her"  
-  bio              : "MS Student in State Key Lab of CAD&CG, Zhejiang University"
+  bio              : "State Key Lab of CAD&CG, Zhejiang University"
   location         : "Hangzhou, China"
   employer         : "Zhejiang University"
   uri              : # URL
