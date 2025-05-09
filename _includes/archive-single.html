@@ -147,13 +147,19 @@
       <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
     {% endif %}
 
-    {% if post.project_url or post.code_url %}
+    {% if post.project_url or post.code_url or post.video_url or post.main_paper_url %}
       <p>
         {% if post.project_url %}
           🌐 <a href="{{ post.project_url }}" target="_blank">Project Page</a>
         {% endif %}
         {% if post.code_url %}
           💻 <a href="{{ post.code_url }}" target="_blank">Code Repository</a>
+        {% endif %}
+        {% if post.video_url %}
+          🎥 <a href="{{ post.video_url }}" target="_blank">Video</a>
+        {% endif %}
+        {% if post.main_paper_url %}
+          📄 <a href="{{ post.main_paper_url }}" target="_blank">Main Paper</a>
         {% endif %}
       </p>
     {% endif %}
