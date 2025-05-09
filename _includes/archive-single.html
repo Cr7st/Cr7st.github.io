@@ -12,7 +12,7 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: "list" }}__item">
+<!-- <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if teaser %}
       <div class="archive__item-teaser">
@@ -22,7 +22,7 @@
           {% else %}
             "{{ teaser | prepend: "/images/" | prepend: base_path }}"
           {% endif %}
-          alt="Teaser for {{ post.title }}" style="width: 100px; height: auto; float: left; margin-right: 15px;">
+          alt="Teaser for {{ post.title }}" style="width: 300px; height: auto; border-radius: 5px;">
       </div>
     {% endif %}
 
@@ -91,4 +91,51 @@
     {% endif %}
 
   </article>
+</div> -->
+
+<div class="{{ include.type | default: "list" }}__item" style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+  {% if teaser %}
+    <!-- Teaser 图片 -->
+    <div class="archive__item-teaser" style="flex-shrink: 0; margin-right: 15px;">
+      <img src=
+        {% if teaser contains "://" %}
+          "{{ teaser }}"
+        {% else %}
+          "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+        {% endif %}
+        alt="Teaser for {{ post.title }}" style="width: 150px; height: auto; border-radius: 5px;">
+    </div>
+  {% endif %}
+
+  <!-- 文章内容 -->
+  <div class="archive__item-content" style="flex: 1;">
+    <h2 class="archive__item-title" itemprop="headline">
+      {% if post.link %}
+        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+      {% else %}
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+      {% endif %}
+    </h2>
+
+    {% if post.collection == 'publications' %}
+      <p><i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
+    {% elsif post.date %}
+      <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+    {% endif %}
+
+    {% if post.excerpt %}
+      <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+    {% endif %}
+
+    {% if post.project_url or post.code_url %}
+      <p>
+        {% if post.project_url %}
+          🌐 <a href="{{ post.project_url }}" target="_blank">Project Page</a>
+        {% endif %}
+        {% if post.code_url %}
+          💻 <a href="{{ post.code_url }}" target="_blank">Code Repository</a>
+        {% endif %}
+      </p>
+    {% endif %}
+  </div>
 </div>
