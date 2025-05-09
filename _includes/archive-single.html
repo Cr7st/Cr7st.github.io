@@ -49,6 +49,7 @@
     {% endif %}
 
     <!-- 作者信息 -->
+    <p>Debug: {{ post.excerpt }}</p>
     {% if post.excerpt %}
       <p class="archive__item-excerpt" itemprop="description" style="margin: 5px 0;">{{ post.excerpt | markdownify }}</p>
     {% endif %}
