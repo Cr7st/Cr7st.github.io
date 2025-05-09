@@ -37,19 +37,23 @@
     </h2>
 
     {% if post.collection == 'publications' %}
-      <p style="margin: 0 0 5px 0; font-style: italic;">{{ post.venue }}</p>
+      <!-- 会议名称 -->
+      <p style="margin: 0 0 3px 0; font-style: italic;">{{ post.venue }}</p>
     {% elsif post.date %}
-      <p class="page__date" style="margin: 0 0 5px 0;">
+      <!-- 日期 -->
+      <p class="page__date" style="margin: 0 0 3px 0;">
         <strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong>
         <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time>
       </p>
     {% endif %}
 
     {% if post.excerpt %}
-      <p class="archive__item-excerpt" itemprop="description" style="margin: 0 0 5px 0;">{{ post.excerpt | markdownify }}</p>
+      <!-- 作者信息 -->
+      <p class="archive__item-excerpt" itemprop="description" style="margin: 0 0 3px 0;">{{ post.excerpt | markdownify }}</p>
     {% endif %}
 
     {% if post.project_url or post.code_url or post.video_url or post.main_paper_url %}
+      <!-- 链接部分 -->
       <p style="margin: 0;">
         {% if post.project_url %}
           🌐 <a href="{{ post.project_url }}" target="_blank">Project Page</a>
