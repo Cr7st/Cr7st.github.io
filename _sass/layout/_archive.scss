@@ -59,20 +59,40 @@
 
 .publication-badge {
   position: absolute;
-  top: 5px;
-  left: 5px;
-  z-index: 1;
+  top: -10px;
+  left: -10px;
+  z-index: 2;
   display: inline-block;
-  padding: 1px 6px;
-  font-size: 10px;
+  padding: 2px 8px;
+  font-size: 11px;
   font-weight: 600;
   color: #fff;
-  background-color: rgba(42, 100, 150, 0.88);
-  border-radius: 3px;
+  background-color: #2a6496;
+  border-radius: 4px;
   letter-spacing: 0.01em;
-  line-height: 1.6;
+  line-height: 1.5;
   white-space: nowrap;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.publication-card {
+  position: relative;
+  margin-bottom: 24px;
+  padding: 16px;
+  border: 1px solid var(--global-border-color);
+  border-radius: 8px;
+  background: var(--global-bg-color);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+  }
+}
+
+.publication-card__inner {
+  display: flex;
+  align-items: flex-start;
 }
 
 /* remove border*/
@@ -98,12 +118,6 @@
   overflow: hidden;
   img {
     width: 100%;
-  }
-}
-
-.archive__item:hover {
-  .archive__item-teaser {
-    box-shadow: 0 0 10px rgba(#000, 0.25);
   }
 }
 
