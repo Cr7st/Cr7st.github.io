@@ -5,6 +5,7 @@ permalink: /publication/localmocap/
 date: 2023-01-01
 select: true
 venue: 'SIGGRAPH Asia 2023 Conference Papers'
+badge: 'SIGGRAPH Asia 2023'
 excerpt: '[Xiaoyu Pan](https://non-void.github.io/), **Bowen Zheng**, Xinwei Jiang, Guanglong Xu, Xianli Gu, Jingxiang Li, Qilong Kou, [He Wang](https://drhewang.com/), Tianjia Shao, Kun Zhou, [Xiaogang Jin*](http://www.cad.zju.edu.cn/home/jin/)'
 code_url: https://github.com/non-void/LocalMoCap
 video_url: https://www.youtube.com/watch?v=NnxuwyJZOPc

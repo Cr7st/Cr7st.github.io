@@ -28,6 +28,10 @@
 
   <!-- 文章内容 -->
   <div class="archive__item-content" style="flex: 1; display: flex; flex-direction: column; justify-content: flex-start;">
+    <!-- 会议标签 -->
+    {% if post.badge %}
+      <div><span class="publication-badge">{{ post.badge }}</span></div>
+    {% endif %}
     <!-- 标题 -->
     <h2 class="archive__item-title" itemprop="headline" style="margin: 0;">
       {% if post.link %}
